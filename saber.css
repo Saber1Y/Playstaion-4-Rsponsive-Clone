@@ -4,6 +4,9 @@
   padding: 0;
   background-color: #000000ed;
 }
+:root {
+  --text--color: rgb(0, 114, 206);
+}
 .container {
   width: 100%;
   min-height: 100vh;
@@ -141,6 +144,23 @@ button:hover {
   margin: 10px;
   cursor: pointer;
 }
+.img-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+}
+
+.ps4-Slim,
+.ps4-pro {
+  height: 600px;
+  object-fit: contain;
+}
+.row-txt {
+  font-size: 5em;
+  color: var(--text--color);
+}
+
 @media only screen and (max-width: 700px) {
   nav ul {
     width: 100%;
@@ -255,7 +275,7 @@ button:hover {
   margin: 5px 10px;
 }
 .ps4-slim {
-  display: block;
-  width: 20px;
-  height: 20px;
+  /* display: block; */
+  width: 10px;
+  height: 10px;
 }
