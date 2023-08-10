@@ -51,34 +51,69 @@ nav ul li a {
 nav ul li a:hover {
   color: #ff3527;
 }
-.row {
+.hero-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 100px 0;
+  padding: 50px;
+  animation: introAnimation 1s ease-out forwards;
 }
-.col-1 {
+@keyframes introAnimation {
+  0% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.Controller {
+  animation: slideFromRight 1s ease-out forwards;
+}
+
+.add-Btn {
+  animation: slideFromRight 1s ease-out forwards;
+}
+
+@keyframes slideFromRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.hero-content {
   font-size: 3rem;
   flex-basis: 40%;
   position: relative;
 }
-.col-1 h2 {
+.hero-content h2 {
+  color: var(--text--color);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
   font-size: 2rem;
   color: #ffffffed;
 }
-.col-1 p {
+.hero-content p {
   color: #ff3527;
   margin: 15px 0;
   font: 1em sans-serif;
   font-weight: 600;
 }
-.col-1 h3 {
+.hero-content h3 {
   font-size: 2rem;
   color: #ffffffed;
   font-weight: 600;
   margin: 20px 0 10px;
 }
-.col-1 h4 {
+.hero-content h4 {
   font: 1em sans-serif;
   font-weight: 400;
   margin: 10px 0;
@@ -109,7 +144,7 @@ button:hover {
   align-items: center;
   justify-content: space-between;
 }
-.col-1::after {
+.hero-content::after {
   content: "";
   width: 10px;
   height: 60%;
@@ -118,13 +153,14 @@ button:hover {
   left: -40px;
   top: 10px;
 }
-.col-2 {
+.hero-row {
   position: relative;
   display: flex;
   align-items: center;
 }
-.col-2 .Controller {
+.hero-row .Controller {
   width: 80%;
+  cursor: pointer;
 }
 .add-Btn img {
   width: 55px;
@@ -140,7 +176,8 @@ button:hover {
   text-align: center;
 }
 .Social-icons img {
-  height: 13px;
+  width: 40px;
+  height: auto;
   margin: 10px;
   cursor: pointer;
 }
@@ -161,7 +198,7 @@ button:hover {
   color: var(--text--color);
 }
 
-@media only screen and (max-width: 700px) {
+@media only screen and (max-width: 768px) {
   nav ul {
     width: 100%;
     background: linear-gradient(#ff5383, #ff3527);
@@ -197,16 +234,19 @@ button:hover {
     flex-direction: column-reverse;
     margin: 13% 0;
   }
-  .col-2 {
+  .hero-row {
     display: flex;
     justify-content: space-evenly;
     flex-basis: 100%;
     margin-bottom: 10px;
   }
-  .col-2 .Controller {
+  .hero-row .img {
     width: 77%;
   }
-  .col-1 {
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    column-gap: 100px;
     flex-basis: 100%;
     font-size: 1em;
   }
@@ -224,12 +264,22 @@ button:hover {
     transition: max-height 0.3s ease;
     top: 60px;
   }
-  .col-2 .Controller {
+  .hero-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 50px;
+    animation: introAnimation 1s ease-out forwards;
+  }
+  .hero-row .Controller {
     margin-top: 40px;
     margin-left: -70px;
     width: 77%;
+    cursor: pointer;
   }
-  .col-1::after {
+  .hero-content::after {
     content: "";
     width: 10px;
     height: 60%;
@@ -240,42 +290,16 @@ button:hover {
   }
 }
 @media only screen and (max-width: 800px) {
-  .col-1 {
+  .hero-content {
     font-size: 10px;
   }
 }
 @media only screen and (max-width: 990px) {
-  .col-1 {
+  .hero-content {
     font-size: 2px;
   }
   .Controller {
     width: 100%;
+    cursor: pointer;
   }
-}
-.row-1 {
-  position: relative;
-  top: 50px;
-  text-align: center;
-  color: #ffffffed;
-}
-.row-1 h2 {
-  font-size: 4em;
-  color: #0000ff;
-  letter-spacing: 5px;
-  font-family: Arial, sans-serif;
-}
-.row-1 p {
-  font-size: 2em;
-}
-.img-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 10px;
-  margin: 5px 10px;
-}
-.ps4-slim {
-  /* display: block; */
-  width: 10px;
-  height: 10px;
 }
