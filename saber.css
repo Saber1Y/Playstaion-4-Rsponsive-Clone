@@ -105,6 +105,7 @@ nav ul li a:hover {
   color: #ff3527;
   margin: 15px 0;
   font: 1em sans-serif;
+  font-family: "dm-sans-serif", sans-serif;
   font-weight: 600;
 }
 .hero-content h3 {
@@ -113,8 +114,13 @@ nav ul li a:hover {
   font-weight: 600;
   margin: 20px 0 10px;
 }
+.hero-content b {
+  color: #ff3527;
+  font-family: "dm-sans-serif", sans-serif;
+}
 .hero-content h4 {
   font: 1em sans-serif;
+  font-family: DM_SansSerif, Cons;
   font-weight: 400;
   margin: 10px 0;
   color: #ff3527;
@@ -230,10 +236,6 @@ button:hover {
   .menu-icon {
     display: block;
   }
-  .row {
-    flex-direction: column-reverse;
-    margin: 13% 0;
-  }
   .hero-row {
     display: flex;
     justify-content: space-evenly;
@@ -254,15 +256,16 @@ button:hover {
     flex: 1;
   }
 }
-@media only screen and (max-width: 400px) {
+@media only screen and (max-width: 450px) {
   nav ul {
     width: 100%;
     background: linear-gradient(#ff5383, #ff3527);
+    text-align: center;
     border: none;
     position: absolute;
     overflow: hidden;
     transition: max-height 0.3s ease;
-    top: 60px;
+    top: 67px;
   }
   .hero-container {
     display: flex;
@@ -273,11 +276,25 @@ button:hover {
     padding: 50px;
     animation: introAnimation 1s ease-out forwards;
   }
+  .hero-row {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .add-Btn {
+    margin-top: 30px;
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+  }
   .hero-row .Controller {
     margin-top: 40px;
     margin-left: -70px;
     width: 77%;
     cursor: pointer;
+    max-width: 100%;
+    max-height: auto;
   }
   .hero-content::after {
     content: "";
